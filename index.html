@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Shoot&Run</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+
+    <div id='beforegame'>
+        <form name='bodyIcon' id='bodyIcon'>
+            <h2>Select icon for you </h2>
+            <input type="radio" id='georgia' name='body' value="georgia" checked>
+            <label for='georgia'><img class='bicon' src="images/georgia.png" alt="georgia"></label>
+
+            <input type="radio" id='russia' name='body'  value="russia">
+            <label for='russia'><img class='bicon' src="images/russia.png" alt="russia"></label>
+
+            <input type="radio" id='reaper' name='body' value="reaper">
+            <label for='reaper'><img class='bicon' src="images/reaper.png" alt="reaper"></label>
+
+            <input type="radio" id='skull' name='body' value="skull">
+            <label for='skull'><img class='bicon' src="images/skull.png" alt="skull"></label>
+
+
+            <h2>Select icon for enemy</h2>
+            <input type="radio" id='egeorgia' name='enemy' value="georgia" checked>
+            <label for='egeorgia'><img class='bicon' src="images/georgia.png" alt="georgia"></label>
+
+            <input type="radio" id='erussia' name='enemy'  value="russia">
+            <label for='erussia'><img class='bicon' src="images/russia.png" alt="russia"></label>
+
+            <input type="radio" id='ereaper' name='enemy' value="reaper">
+            <label for='ereaper'><img class='bicon' src="images/reaper.png" alt="reaper"></label>
+
+            <input type="radio" id='eskull' name='enemy' value="skull">
+            <label for='eskull'><img class='bicon' src="images/skull.png" alt="skull"></label>
+            <br>
+            <br>
+            <button id='startGame' type='button'>play</button>
+        </form>
+
+    </div>
+    
+    <div id='game' class="hide">
+    <canvas id="run"></canvas>
+
+
+    <div class='iconContainer'><img id='info' class='icon button' title='info' src='./images/info.png'> <img id='pause' title='pause' class="icon button" src="./images/pause.png" ></div>
+
+    <div class='gamePaused hide'><img id='play' title='play' class='button' src="./images/play.png"></div>
+
+    <div id='infoContainer' class="hide">
+
+        <!-- this extra div element lets me easily detect click out of info window -->
+        <div id='outClick'></div> this 
+        <ul class='infoList'>
+            <img class="icon button" id='close' src="./images/close.png">
+            <li class='info'>use W S A D for movement</li>
+            <li class='info'>use mouse to shoot</li>
+            <li class='info'>killing enemies without missing builds up combo</li>
+            <li class='info'>higher combo gives higher scores</li>
+        </ul>
+    </div>
+
+    <img class='button' id='playAgain' src="./images/playagain.png">
+    </div>
+
+
+    <script src="js/params.js"></script>
+    <script src="js/script.js"></script>
+
+    <div id='black' class='hide'></div>
+
+
+</body>
+
+
+
+</html>
